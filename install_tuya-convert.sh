@@ -15,7 +15,7 @@ function error_exit() {
   local REASON="\e[97m${1:-$DEFAULT}\e[39m"
   local FLAG="\e[91m[ERROR:LXC] \e[93m$EXIT@$LINE"
   msg "$FLAG $REASON"
-  exit $EXIT
+  # exit $EXIT
 }
 function warn() {
   local REASON="\e[97m$1\e[39m"
