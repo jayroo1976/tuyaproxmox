@@ -55,7 +55,7 @@ pushd $TEMP_DIR >/dev/null
 
 # Download setup and login script
 GITHUB=https://github.com/
-GITHUB_REPO=whiskerz007/proxmox_tuya-convert_container
+GITHUB_REPO=Jayroo1976/tuyaproxmox
 GITHUB_REPO_BRANCH=master
 URL=${GITHUB}${GITHUB_REPO}/raw/${GITHUB_REPO_BRANCH}
 wget -qL ${URL}/{commit_switcher,configure_tuya-convert,install_tuya-convert,login}.sh
