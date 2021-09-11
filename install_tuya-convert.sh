@@ -10,12 +10,12 @@ alias die='EXIT=$? LINE=$LINENO error_exit'
 trap die ERR
 
 function error_exit() {
-  trap - ERR
+  # trap - ERR
   local DEFAULT='Unknown failure occured.'
   local REASON="\e[97m${1:-$DEFAULT}\e[39m"
   local FLAG="\e[91m[ERROR:LXC] \e[93m$EXIT@$LINE"
   msg "$FLAG $REASON"
-  # exit $EXIT
+  exit $EXIT
 }
 function warn() {
   local REASON="\e[97m$1\e[39m"
