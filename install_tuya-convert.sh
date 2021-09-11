@@ -50,15 +50,17 @@ while [ "$(hostname -I)" = "" ]; do
 done
 
 # Update container OS
-msg "Updating container OS... commented out"
-# apt-get update >/dev/null
-# apt-get -qqy upgrade &>/dev/null
+msg "Updating container OS... now happeneing"
+apt-get update >/dev/null
+apt-get -qqy upgrade &>/dev/null
+msg "Updating container OS... apt updates deployed"
 
 # Install prerequisites
-msg "Installing prerequisites..."
+msg "Installing prerequisites... James script"
 echo "samba-common samba-common/dhcp boolean false" | debconf-set-selections
 apt-get -qqy install \
   git curl network-manager net-tools samba &>/dev/null
+msg "Updating container OS... pre req stage completed"
 
 # Clone tuya-convert
 msg "Cloning tuya-convert..."
