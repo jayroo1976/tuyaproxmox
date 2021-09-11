@@ -31,7 +31,8 @@ function msg() {
 LOCALE=${1:-en_US.UTF-8}
 
 # Prepare container OS
-msg "Customizing container OS..."
+msg "Customizing container OS... usin jayroo script"
+
 echo "root:tuya" | chpasswd
 sed -i "s/\(# \)\($LOCALE.*\)/\2/" /etc/locale.gen
 export LANGUAGE=$LOCALE LANG=$LOCALE
