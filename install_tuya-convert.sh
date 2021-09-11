@@ -49,9 +49,9 @@ while [ "$(hostname -I)" = "" ]; do
 done
 
 # Update container OS
-msg "Updating container OS..."
-apt-get update >/dev/null
-apt-get -qqy upgrade &>/dev/null
+msg "Updating container OS... commented out"
+# apt-get update >/dev/null
+# apt-get -qqy upgrade &>/dev/null
 
 # Install prerequisites
 msg "Installing prerequisites..."
