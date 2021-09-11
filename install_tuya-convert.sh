@@ -52,7 +52,7 @@ done
 # Update container OS
 msg "Updating container OS... now happeneing"
 apt-get update --allow-releaseinfo-change
-apt-get -qqy upgrade --allow-releaseinfo-change
+apt-get -qqy upgrade
 msg "Updating container OS... apt updates deployed"
 
 # Install prerequisites
